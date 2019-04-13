@@ -1,0 +1,21 @@
+
+p {
+  color:#379F9F;
+  font-size: 25px;
+}
+
+ul {
+  color:#379F9F;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.result-type {
+  color:grey;
+  font-size: 27px;
+}
+
+h3 {
+	padding: 5px;
+	padding-left: 30px;
+}
