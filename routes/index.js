@@ -12,12 +12,13 @@ router.get("/make-submission", function(req, res){
 
 router.get("/FAQ", function(req, res){
 	res.render("FAQ");
+});
 router.get("/MDMA", function(req, res){
 	res.render("MDMA");
 });
 
-router.get("/1"), function(req, res){
-	res.render("landing1")
+router.get("/1", function(req, res){
+	res.render("landing1");
 });
 
 module.exports = router;
