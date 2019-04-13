@@ -24,4 +24,7 @@ router.get("/1", function(req, res){
 	res.render("landing1");
 });
 
+router.get("/analysis", function(req, res){
+	res.render("analysis");
+});
 module.exports = router;
