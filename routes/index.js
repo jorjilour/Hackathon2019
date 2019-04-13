@@ -11,9 +11,12 @@ router.get("/make-submission", function(req, res){
 });
 
 router.get("/FAQ", function(req, res){
-	res.render("FAQ");
+	res.render("FAQ")});
 router.get("/MDMA", function(req, res){
 	res.render("MDMA");
+});
+router.get("/allocate", function(req, res){
+	res.render("allocate");
 });
 
 

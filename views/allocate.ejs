@@ -4,7 +4,7 @@
 
 <head>
 
-  <title>Drug Help</title>
+  <title>Location to drop off sample</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/stylesheets/make-submit.css">
@@ -44,74 +44,12 @@
 
 
 <div class="container">
-  <div class = "jumbotron">
-    <h1> Examinable Drugs </h1>
-    <p> Choose the the drug that you would like to sample</p>
-    <!-- <div class="md-form mt-0">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search"> -->
-</div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-sm-6">
-      <div class="thumbnail">
-      <a href="/">
-        <img src="/stylesheets/cocaine.png">
-        <p class="centerit"> Cocaine</p>
-      </a>
-      </div>
+    <div class = "jumbotron">
+        <h2> Location to drop off sample </h2>
+        <p>201 Spencer St, Docklands VIC 3008</p>
+        <button><a href="/confirmSubmission">OK</a></button>
     </div>
-    <div class="col-lg-4 col-sm-6">
-      <div class = "thumbnail">
-      <a href="/MDMA">
-        <img src="/stylesheets/MDMA.png">
-        <p class="centerit"> MDMA / Ecstasy</p></a>
-
-      </div>  
-    </div>
-
-    <div class="col-lg-4 col-sm-6">
-      <div class="thumbnail">
-      <a href="/">
-        <img src="/stylesheets/meth.png">
-        <p class="centerit"> Methamphetamines</p>
-      </a>
-      </div>
-    </div> 
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-sm-6">
-      <div class="thumbnail">
-      <a href="/">
-        <img src="/stylesheets/heroin.png">
-        <p class="centerit"> Heroin</p>
-      </a>
-
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6">
-      <div class = "thumbnail">
-      <a href="/">
-
-        <img src="/stylesheets/shrooms.png">
-        <p class="centerit"> Mushrooms </p>
-      </a>
-      </div>  
-    </div>
-
-    <div class="col-lg-4 col-sm-6">
-      <div class="thumbnail">
-      <a href="/">
-
-        <img src="/stylesheets/LSD.png">
-        <p class="centerit"> LSD </p>
-      </a>
-      </div>
-    </div> 
-  </div>
-
- 
+    <div id="googleMap" style="width:100%;height:380px;"></div>
 
 </div>  
 
@@ -128,6 +66,36 @@
 
 <!-- BOOtSTRAP JAVASCRIPT-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>
+    function myMap() {
+    var map = new google.maps.Map(document.getElementById("googleMap"),{
+    center:new google.maps.LatLng(-37.8130381,144.941159),
+    zoom:13.5
+    });
+
+    marker = new google.maps.Marker({
+        map: map,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        position: {lat: -37.8130381, lng: 144.941159}
+        });
+        marker.addListener('click', toggleBounce);
+    }
+
+
+    function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+        marker.setAnimation(null);
+    } else {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrRvXTwRt9lZuAj_SF-4U_6DQo_ujWg0Q&callback=myMap"></script>
 
 </body>
 
