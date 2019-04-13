@@ -19,6 +19,9 @@ router.get("/MDMA", function(req, res){
 router.get("/allocate", function(req, res){
 	res.render("allocate");
 });
+router.get("/About", function(req, res){
+	res.render("About");
+});
 
 router.get("/1", function(req, res){
 	res.render("landing1");
