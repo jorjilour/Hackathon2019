@@ -10,5 +10,9 @@ router.get("/make-submission", function(req, res){
 	res.render("make-submission");
 });
 
+router.get("/MDMA", function(req, res){
+	res.render("MDMA");
+});
+
 
 module.exports = router;
