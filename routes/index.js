@@ -14,5 +14,8 @@ router.get("/MDMA", function(req, res){
 	res.render("MDMA");
 });
 
+router.get("/1"), function(req, res){
+	res.render("landing1")
+});
 
 module.exports = router;
