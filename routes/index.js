@@ -10,6 +10,8 @@ router.get("/make-submission", function(req, res){
 	res.render("make-submission");
 });
 
+router.get("/FAQ", function(req, res){
+	res.render("FAQ");
 router.get("/MDMA", function(req, res){
 	res.render("MDMA");
 });
