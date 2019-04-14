@@ -11,6 +11,15 @@
 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <script>
+    console.log("helo");
+    const http = new XMLHttpRequest()
+
+    http.open("GET", "https://api.lyrics.ovh/v1/shakira/waka-waka")
+    http.send()
+
+    http.onload = () => console.log(http.responseText)
+  </script>
 </head>
 
 <body>
@@ -55,7 +64,7 @@
   <div class="row">
     <div class="col-lg-4 col-sm-6">
       <div class="thumbnail">
-      <a href="/">
+      <a href="/MDMA">
         <img src="/stylesheets/cocaine.png">
         <p class="centerit"> Cocaine</p>
       </a>
@@ -72,7 +81,7 @@
 
     <div class="col-lg-4 col-sm-6">
       <div class="thumbnail">
-      <a href="/">
+      <a href="/MDMA">
         <img src="/stylesheets/meth.png">
         <p class="centerit"> Methamphetamines</p>
       </a>
@@ -83,7 +92,7 @@
   <div class="row">
     <div class="col-lg-4 col-sm-6">
       <div class="thumbnail">
-      <a href="/">
+      <a href="/MDMA">
         <img src="/stylesheets/heroin.png">
         <p class="centerit"> Heroin</p>
       </a>
@@ -92,7 +101,7 @@
     </div>
     <div class="col-lg-4 col-sm-6">
       <div class = "thumbnail">
-      <a href="/">
+      <a href="/MDMA">
 
         <img src="/stylesheets/shrooms.png">
         <p class="centerit"> Mushrooms </p>
@@ -102,7 +111,7 @@
 
     <div class="col-lg-4 col-sm-6">
       <div class="thumbnail">
-      <a href="/">
+      <a href="/MDMA">
 
         <img src="/stylesheets/LSD.png">
         <p class="centerit"> LSD </p>
